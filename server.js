@@ -13,7 +13,7 @@ app.get('/metadata/', async (req, res) => {
   try {
     const {url} = req.query;
     const result = await fetch (url);
-    const html await result.text();
+    const html = await result.text();
     const $ = cheerio.load(html);
 
     res.json({
